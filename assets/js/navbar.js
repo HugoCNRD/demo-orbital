@@ -79,6 +79,45 @@ logout;
 
 }
 
+const menuButton =
+document.querySelector(".user-button");
+
+
+const dropdown =
+document.querySelector(".user-dropdown");
+
+
+
+if(menuButton){
+
+
+menuButton.onclick = (e)=>{
+
+
+e.stopPropagation();
+
+
+dropdown.classList.toggle("active");
+
+
+};
+
+
+}
+
+
+
+document.onclick=()=>{
+
+
+if(dropdown){
+
+dropdown.classList.remove("active");
+
+}
+
+
+};
 
 
 });
