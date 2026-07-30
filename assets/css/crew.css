@@ -387,5 +387,38 @@ padding:20px;
 
 }
 
+.icon svg{
+
+
+width:28px;
+
+height:28px;
+
+
+stroke-width:2;
+
+
+
+}
+
+
+.icon{
+
+
+background:
+
+linear-gradient(
+135deg,
+#00c6ff,
+#7c4dff
+);
+
+
+
+color:white;
+
+
+}
+
 
 }
