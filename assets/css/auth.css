@@ -1,1 +1,286 @@
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    font-family:'Inter',sans-serif;
+}
 
+
+body{
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:#050b18;
+
+    color:white;
+
+    overflow:hidden;
+
+}
+
+
+
+.background{
+
+    position:absolute;
+
+    width:100%;
+    height:100%;
+
+    background:
+    radial-gradient(circle at top left,#12345c 0%,transparent 40%),
+    radial-gradient(circle at bottom right,#0b2340 0%,transparent 45%);
+
+    z-index:-1;
+
+}
+
+
+
+.login-container{
+
+    width:100%;
+    max-width:420px;
+
+    padding:25px;
+
+    text-align:center;
+
+}
+
+
+
+.logo-circle{
+
+    width:75px;
+    height:75px;
+
+    margin:auto;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+
+    background:
+    linear-gradient(135deg,#1c8cff,#0055ff);
+
+
+    border-radius:22px;
+
+    font-size:28px;
+    font-weight:800;
+
+    box-shadow:
+    0 10px 40px rgba(0,120,255,.35);
+
+}
+
+
+
+.logo-area h1{
+
+    margin-top:20px;
+
+    font-size:32px;
+
+}
+
+
+
+.logo-area p{
+
+    color:#94a7c6;
+
+    margin-top:8px;
+
+}
+
+
+
+.login-card{
+
+    margin-top:35px;
+
+    background:
+
+    rgba(15,25,45,.85);
+
+
+    backdrop-filter:blur(15px);
+
+
+    border:
+
+    1px solid rgba(255,255,255,.08);
+
+
+    border-radius:22px;
+
+
+    padding:32px;
+
+
+    box-shadow:
+
+    0 20px 60px rgba(0,0,0,.4);
+
+}
+
+
+
+.login-card h2{
+
+    font-size:24px;
+
+}
+
+
+
+.subtitle{
+
+    margin-top:10px;
+
+    color:#8c9bb5;
+
+    font-size:14px;
+
+}
+
+
+
+.input-group{
+
+    text-align:left;
+
+    margin-top:22px;
+
+}
+
+
+
+label{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    color:#b7c4da;
+
+    font-size:14px;
+
+}
+
+
+
+input{
+
+
+    width:100%;
+
+    padding:14px 16px;
+
+    border-radius:12px;
+
+
+    border:
+
+    1px solid rgba(255,255,255,.1);
+
+
+    background:#081222;
+
+
+    color:white;
+
+
+    outline:none;
+
+    font-size:15px;
+
+
+}
+
+
+
+input:focus{
+
+    border-color:#248cff;
+
+}
+
+
+
+button{
+
+
+    width:100%;
+
+    margin-top:28px;
+
+
+    padding:15px;
+
+
+    border:none;
+
+
+    border-radius:12px;
+
+
+    background:
+
+    linear-gradient(135deg,#1684ff,#0055ff);
+
+
+    color:white;
+
+
+    font-size:16px;
+
+    font-weight:600;
+
+
+    cursor:pointer;
+
+
+    transition:.25s;
+
+
+}
+
+
+
+button:hover{
+
+    transform:translateY(-2px);
+
+    opacity:.9;
+
+}
+
+
+
+#message{
+
+    margin-top:18px;
+
+    font-size:14px;
+
+}
+
+
+
+footer{
+
+    margin-top:35px;
+
+    color:#63748f;
+
+    font-size:12px;
+
+}
