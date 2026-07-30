@@ -1,4 +1,4 @@
-const WORKER_URL = "YOUR_CLOUDFLARE_WORKER_URL";
+const WORKER_URL = "https://crew-center-api.hugobatigne.workers.dev/";
 
 
 document.addEventListener("DOMContentLoaded",()=>{
