@@ -1,1 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Orbital Crew Center | Login</title>
+
+<link rel="stylesheet" href="assets/css/auth.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="background"></div>
+
+
+<div class="login-container">
+
+    <div class="logo-area">
+
+        <div class="logo-circle">
+            VA
+        </div>
+
+        <h1>Orbital Crew Center</h1>
+        <p>Virtual Airline Management System</p>
+
+    </div>
+
+
+
+    <div class="login-card">
+
+        <h2>Welcome back</h2>
+
+        <p class="subtitle">
+            Sign in with your Infinite Flight Community account
+        </p>
+
+
+        <form id="loginForm">
+
+
+            <div class="input-group">
+
+                <label>
+                    Infinite Flight Username
+                </label>
+
+                <input 
+                type="text"
+                id="username"
+                placeholder="IFC Username"
+                autocomplete="username"
+                required>
+
+            </div>
+
+
+
+            <div class="input-group">
+
+                <label>
+                    Password
+                </label>
+
+                <input 
+                type="password"
+                id="password"
+                placeholder="Password"
+                autocomplete="current-password"
+                required>
+
+            </div>
+
+
+
+            <button type="submit" id="loginButton">
+
+                Sign In
+
+            </button>
+
+
+        </form>
+
+
+
+        <div id="message"></div>
+
+
+    </div>
+
+
+
+    <footer>
+
+        © 2026 Virtual Airline Crew Center  
+        <br>
+        All rights reserved.
+
+    </footer>
+
+
+</div>
+
+
+
+<script src="assets/js/auth.js"></script>
+
+</body>
+</html>
