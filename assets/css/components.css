@@ -1,1 +1,272 @@
+*{
+    box-sizing:border-box;
+}
 
+
+body{
+
+    margin:0;
+
+    font-family:'Inter',sans-serif;
+
+}
+
+
+
+/* =====================
+   NAVBAR
+===================== */
+
+
+.navbar{
+
+    height:80px;
+
+    width:100%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+
+    padding:0 35px;
+
+
+    background:#081426;
+
+
+    border-bottom:
+    1px solid rgba(255,255,255,.08);
+
+
+}
+
+
+
+.nav-logo{
+
+    font-size:20px;
+
+    font-weight:800;
+
+    color:white;
+
+}
+
+
+
+
+
+.nav-links{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:25px;
+
+
+}
+
+
+
+.nav-links a{
+
+    color:#9eb0c9;
+
+    text-decoration:none;
+
+    font-size:14px;
+
+    transition:.2s;
+
+
+}
+
+
+
+.nav-links a:hover,
+.nav-links .active{
+
+    color:white;
+
+}
+
+
+
+
+
+/* =====================
+   RIGHT MENU
+===================== */
+
+
+.nav-right{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:25px;
+
+}
+
+
+
+#zuluClock{
+
+    color:#8fa5c2;
+
+    font-size:14px;
+
+}
+
+
+
+
+
+.user-menu{
+
+    position:relative;
+
+    cursor:pointer;
+
+    color:white;
+
+}
+
+
+
+.dropdown{
+
+    display:none;
+
+
+    position:absolute;
+
+
+    right:0;
+
+
+    top:35px;
+
+
+    min-width:170px;
+
+
+    background:#101d33;
+
+
+    border:
+
+    1px solid rgba(255,255,255,.1);
+
+
+    border-radius:14px;
+
+
+    padding:15px;
+
+
+    z-index:100;
+
+
+
+}
+
+
+
+.user-menu:hover .dropdown{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+
+}
+
+
+
+.dropdown a,
+.dropdown button{
+
+
+    color:white;
+
+    text-decoration:none;
+
+
+    background:none;
+
+    border:none;
+
+
+    cursor:pointer;
+
+
+    text-align:left;
+
+    font-size:14px;
+
+}
+
+
+
+.dropdown button:hover,
+.dropdown a:hover{
+
+    color:#258cff;
+
+}
+
+
+
+
+
+/* =====================
+   BUTTONS
+===================== */
+
+
+button{
+
+    transition:.2s;
+
+}
+
+
+button:hover{
+
+    transform:translateY(-2px);
+
+}
+
+
+
+/* =====================
+   RESPONSIVE
+===================== */
+
+
+@media(max-width:1000px){
+
+
+.nav-links{
+
+    display:none;
+
+}
+
+
+.navbar{
+
+    padding:0 20px;
+
+}
+
+
+}
