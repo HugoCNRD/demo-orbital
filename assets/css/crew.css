@@ -157,5 +157,181 @@ padding:20px;
 
 }
 
+.stat-card{
+
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+
+    position:relative;
+
+    overflow:hidden;
+
+
+}
+
+
+
+.stat-card::after{
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    right:-40px;
+
+    bottom:-40px;
+
+
+    width:120px;
+
+    height:120px;
+
+
+    background:#1684ff;
+
+
+    opacity:.12;
+
+
+    border-radius:50%;
+
+
+}
+
+
+
+
+.icon{
+
+
+    width:55px;
+
+    height:55px;
+
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+
+    font-size:28px;
+
+
+    border-radius:15px;
+
+
+    background:
+
+    rgba(22,132,255,.25);
+
+
+    border:
+
+    1px solid rgba(80,170,255,.4);
+
+
+}
+
+
+
+
+.card{
+
+
+    background:
+
+    rgba(17,55,95,.75);
+
+
+    border:
+
+    1px solid rgba(100,180,255,.2);
+
+
+    box-shadow:
+
+    0 10px 35px rgba(0,0,0,.25);
+
+
+    transition:.25s;
+
+
+}
+
+
+
+.card:hover{
+
+
+    transform:translateY(-5px);
+
+
+    border-color:#1684ff;
+
+
+    box-shadow:
+
+    0 15px 40px rgba(22,132,255,.25);
+
+
+}
+
+
+
+.rank-card{
+
+
+    background:
+
+    linear-gradient(
+    135deg,
+    #123e70,
+    #102d50
+    );
+
+
+}
+
+
+
+.progress-bar{
+
+
+    background:#071a32;
+
+
+    border:
+
+    1px solid rgba(255,255,255,.15);
+
+
+}
+
+
+
+#rankProgress{
+
+
+    background:
+
+    linear-gradient(
+    90deg,
+    #00d4ff,
+    #1684ff
+    );
+
+
+}
+
 
 }
