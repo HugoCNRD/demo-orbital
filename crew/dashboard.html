@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Crew Dashboard</title>
+
+<link rel="stylesheet" href="/assets/css/components.css">
+<link rel="stylesheet" href="/assets/css/crew.css">
+
+</head>
+
+
+<body>
+
+
+<nav class="navbar">
+
+
+<div class="nav-logo">
+VA LOGO
+</div>
+
+
+
+<div class="nav-links">
+
+<a class="active" href="/crew/dashboard.html">
+Dashboard
+</a>
+
+<a href="/crew/routes.html">
+Routes
+</a>
+
+<a href="/crew/pirep.html">
+File PIREP
+</a>
+
+<a href="/crew/logbook.html">
+Logbook
+</a>
+
+<a href="/crew/leaderboard.html">
+Leaderboard
+</a>
+
+<a href="/crew/loa.html">
+LOA
+</a>
+
+</div>
+
+
+
+
+<div class="nav-right">
+
+
+<div id="zuluClock">
+00:00:00 Z
+</div>
+
+
+
+<div class="user-menu">
+
+<span id="userName">
+User
+</span>
+
+
+<div class="dropdown">
+
+
+<span id="userRank">
+Rank
+</span>
+
+
+<a id="staffAccess"
+href="/staff/dashboard.html">
+
+Staff Center
+
+</a>
+
+
+<button id="logoutButton">
+Sign Out
+</button>
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</nav>
+
+
+
+
+<main class="dashboard-container">
+
+
+
+<h1>
+Crew Dashboard
+</h1>
+
+<p class="welcome">
+Welcome back,
+<span id="pilotName"></span>
+</p>
+
+
+
+
+<section class="stats-grid">
+
+
+
+<div class="card">
+
+<h3>
+IF Grade
+</h3>
+
+<p id="ifGrade">
+Loading...
+</p>
+
+</div>
+
+
+
+
+<div class="card">
+
+<h3>
+VA Hours
+</h3>
+
+<p id="hours">
+0:00
+</p>
+
+</div>
+
+
+
+
+<div class="card">
+
+<h3>
+PIREPs Filed
+</h3>
+
+<p id="pireps">
+0
+</p>
+
+</div>
+
+
+
+
+<div class="card">
+
+<h3>
+Current Flight
+</h3>
+
+<p id="currentFlight">
+No flight currently
+</p>
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+<section class="large-grid">
+
+
+
+<div class="card rank-card">
+
+
+<h2>
+Current Rank
+</h2>
+
+
+<h3 id="rank">
+Cadet
+</h3>
+
+
+
+<div class="progress-bar">
+
+
+<div id="rankProgress"></div>
+
+
+</div>
+
+
+
+<p id="nextRank">
+
+Loading next rank...
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="card">
+
+
+<h2>
+Last Filed PIREP
+</h2>
+
+
+<div id="lastPirep">
+
+No PIREP found
+
+</div>
+
+
+</div>
+
+
+
+
+<div class="card">
+
+
+<h2>
+Route Of The Week
+</h2>
+
+
+<div id="routeWeek">
+
+Loading...
+
+</div>
+
+
+</div>
+
+
+
+
+</section>
+
+
+
+</main>
+
+
+
+
+
+
+<footer>
+
+© 2026 Virtual Airline Crew Center
+
+</footer>
+
+
+
+
+<script src="/assets/js/session.js"></script>
+<script src="/assets/js/api.js"></script>
+<script src="/assets/js/navbar.js"></script>
+<script src="/assets/js/clock.js"></script>
+<script src="/assets/js/notifications.js"></script>
+
+<script src="/assets/js/dashboard.js"></script>
+
+
+</body>
+
+</html>
