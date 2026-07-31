@@ -17,6 +17,14 @@ document.addEventListener("DOMContentLoaded",()=>{
 
 });
 
+const session = {
+
+    username: user.username,
+
+    staff: user.staff
+
+};
+
 
 
 const form=document.getElementById("loginForm");
