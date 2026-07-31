@@ -238,15 +238,15 @@ if(session){
 
 
 
-    if(
-        staffButton &&
-        session.staff === true
-    ){
-
-        staffButton.style.display =
-            "flex";
-
-    }
+   if(
+       staffButton &&
+       isStaff()
+   ){
+   
+       staffButton.style.display =
+           "flex";
+   
+   }
 
 
 
