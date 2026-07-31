@@ -1,261 +1,632 @@
-body{
+/* =====================================================
+   CREW CENTER UI
+   Dashboard Specific Styling
+===================================================== */
 
-background:#050b18;
-color:white;
 
-}
+/* =====================================================
+   DASHBOARD HEADER
+===================================================== */
 
 
+.dashboard-header {
 
-.dashboard-container{
 
-padding:40px;
+    margin-bottom:
 
-max-width:1400px;
+    35px;
 
-margin:auto;
-
-}
-
-
-
-h1{
-
-font-size:36px;
-
-}
-
-
-
-.welcome{
-
-color:#8fa2bd;
-
-margin-top:10px;
-
-}
-
-
-
-.stats-grid{
-
-margin-top:35px;
-
-display:grid;
-
-grid-template-columns:
-repeat(4,1fr);
-
-gap:20px;
-
-}
-
-
-
-.large-grid{
-
-margin-top:25px;
-
-display:grid;
-
-grid-template-columns:
-repeat(3,1fr);
-
-gap:20px;
-
-}
-
-
-
-.card{
-
-
-background:
-
-linear-gradient(
-145deg,
-rgba(35,85,140,.8),
-rgba(18,45,80,.85)
-);
-
-
-
-border:
-
-1px solid rgba(120,210,255,.25);
-
-
-
-border-radius:24px;
-
-
-padding:28px;
-
-
-
-box-shadow:
-
-0 20px 50px rgba(0,0,0,.25);
-
-
-
-backdrop-filter:
-
-blur(15px);
-
-
-
-transition:.3s;
-
-
-}
-
-
-
-.card:hover{
-
-
-transform:
-
-translateY(-6px);
-
-
-
-border-color:
-
-#42d9ff;
-
-
-
-box-shadow:
-
-0 20px 60px rgba(0,180,255,.25);
-
-
-
-}
-
-
-
-.card h3,
-.card h2{
-
-margin-bottom:15px;
-
-}
-
-
-
-.card p{
-
-color:#c8d5e8;
-
-font-size:22px;
-
-}
-
-
-
-.progress-bar{
-
-height:12px;
-
-background:#091526;
-
-border-radius:20px;
-
-overflow:hidden;
-
-}
-
-
-
-#rankProgress{
-
-height:100%;
-
-width:0%;
-
-background:#1684ff;
-
-}
-
-
-
-footer{
-
-text-align:center;
-
-padding:30px;
-
-color:#66758d;
-
-}
-
-
-
-@media(max-width:900px){
-
-
-.stats-grid,
-.large-grid{
-
-grid-template-columns:1fr;
-
-}
-
-
-.dashboard-container{
-
-padding:20px;
-
-}
-
-.stat-card{
 
 
     display:flex;
 
-    align-items:center;
 
-    gap:20px;
+    justify-content:space-between;
 
 
-    position:relative;
+    align-items:flex-end;
 
-    overflow:hidden;
 
 
 }
 
 
 
-.stat-card::after{
+.dashboard-header h1 {
 
 
-    content:"";
+    font-size:
+
+    38px;
+
+
+
+    letter-spacing:
+
+    -.8px;
+
+
+
+}
+
+
+
+.dashboard-header p {
+
+
+    margin-top:
+
+    8px;
+
+
+
+    color:
+
+    var(--text-secondary);
+
+
+
+    font-size:
+
+    16px;
+
+
+
+}
+
+
+
+
+
+/* =====================================================
+   MAIN DASHBOARD GRID
+===================================================== */
+
+
+.dashboard-grid {
+
+
+    display:grid;
+
+
+
+    grid-template-columns:
+
+    repeat(4,1fr);
+
+
+
+    gap:
+
+    22px;
+
+
+
+}
+
+
+
+
+
+/* =====================================================
+   HERO CARDS
+===================================================== */
+
+
+.hero-card {
+
+
+    min-height:
+
+    270px;
+
+
+
+    display:flex;
+
+
+    flex-direction:column;
+
+
+    justify-content:space-between;
+
+
+
+}
+
+
+
+.hero-card .card-value {
+
+
+    font-size:
+
+    52px;
+
+
+
+}
+
+
+
+.rank-card {
+
+
+    grid-column:
+
+    span 2;
+
+
+
+    background:
+
+
+    linear-gradient(
+
+        135deg,
+
+        rgba(155,108,255,.35),
+
+        rgba(75,35,130,.25)
+
+    );
+
+
+
+}
+
+
+
+
+
+.hours-card {
+
+
+    grid-column:
+
+    span 2;
+
+
+
+    background:
+
+
+    linear-gradient(
+
+        135deg,
+
+        rgba(53,232,143,.28),
+
+        rgba(10,100,80,.25)
+
+    );
+
+
+
+}
+
+
+
+
+
+/* =====================================================
+   RANK COMPONENT
+===================================================== */
+
+
+.rank-info {
+
+
+    display:flex;
+
+
+    justify-content:space-between;
+
+
+    align-items:center;
+
+
+
+}
+
+
+
+.rank-name {
+
+
+    font-size:
+
+    32px;
+
+
+
+    font-weight:
+
+    700;
+
+
+
+}
+
+
+
+.rank-next {
+
+
+    color:
+
+    var(--text-secondary);
+
+
+
+    margin-top:
+
+    10px;
+
+
+
+}
+
+
+
+.rank-progress-text {
+
+
+    display:flex;
+
+
+    justify-content:space-between;
+
+
+
+    margin-top:
+
+    12px;
+
+
+
+    font-size:
+
+    13px;
+
+
+
+    color:
+
+    var(--text-secondary);
+
+
+
+}
+
+
+
+
+
+/* =====================================================
+   KPI CARDS
+===================================================== */
+
+
+.kpi-card {
+
+
+    min-height:
+
+    160px;
+
+
+
+}
+
+
+
+.kpi-card .card-value {
+
+
+    font-size:
+
+    34px;
+
+
+
+}
+
+
+
+.kpi-title {
+
+
+    color:
+
+    var(--text-secondary);
+
+
+
+    font-size:
+
+    13px;
+
+
+
+    text-transform:
+
+    uppercase;
+
+
+
+    letter-spacing:
+
+    1px;
+
+
+
+}
+
+
+
+
+
+/* individual KPI colors */
+
+
+.kpi-grade {
+
+
+    background:
+
+
+    linear-gradient(
+
+        135deg,
+
+        rgba(41,151,255,.25),
+
+        transparent
+
+    );
+
+
+
+}
+
+
+
+.kpi-pirep {
+
+
+    background:
+
+
+    linear-gradient(
+
+        135deg,
+
+        rgba(255,173,66,.25),
+
+        transparent
+
+    );
+
+
+
+}
+
+
+
+.kpi-flight {
+
+
+    background:
+
+
+    linear-gradient(
+
+        135deg,
+
+        rgba(0,217,255,.25),
+
+        transparent
+
+    );
+
+
+
+}
+
+
+
+.kpi-status {
+
+
+    background:
+
+
+    linear-gradient(
+
+        135deg,
+
+        rgba(53,232,143,.25),
+
+        transparent
+
+    );
+
+
+
+}
+
+
+
+
+
+/* =====================================================
+   CURRENT FLIGHT
+===================================================== */
+
+
+.current-flight {
+
+
+    grid-column:
+
+    span 2;
+
+
+
+}
+
+
+
+.flight-route {
+
+
+    display:flex;
+
+
+    justify-content:center;
+
+
+    align-items:center;
+
+
+
+    gap:
+
+    25px;
+
+
+
+    margin:
+
+    30px 0;
+
+
+
+}
+
+
+
+.airport {
+
+
+    text-align:center;
+
+
+
+}
+
+
+
+.airport-code {
+
+
+    font-size:
+
+    38px;
+
+
+
+    font-weight:
+
+    700;
+
+
+
+}
+
+
+
+.airport-name {
+
+
+    font-size:
+
+    13px;
+
+
+
+    color:
+
+    var(--text-secondary);
+
+
+
+}
+
+
+
+
+.flight-line {
+
+
+    flex:1;
+
+
+
+    height:
+
+    2px;
+
+
+
+    background:
+
+    linear-gradient(
+
+        90deg,
+
+        var(--cyan),
+
+        var(--purple)
+
+    );
+
+
+
+    position:relative;
+
+
+
+}
+
+
+
+
+
+.flight-line::after {
+
+
+    content:"✈";
+
 
 
     position:absolute;
 
 
-    right:-40px;
 
-    bottom:-40px;
+    top:
 
-
-    width:120px;
-
-    height:120px;
+    -15px;
 
 
-    background:#1684ff;
+
+    left:
+
+    50%;
 
 
-    opacity:.12;
+
+    transform:
+
+    translateX(-50%);
 
 
-    border-radius:50%;
+
+    color:
+
+    var(--cyan);
+
 
 
 }
@@ -263,35 +634,135 @@ padding:20px;
 
 
 
-.icon{
+
+/* =====================================================
+   LAST PIREP
+===================================================== */
 
 
-    width:55px;
+.pirep-card {
 
-    height:55px;
+
+    grid-column:
+
+    span 4;
+
+
+
+}
+
+
+
+.pirep-header {
 
 
     display:flex;
 
+
+    justify-content:space-between;
+
+
     align-items:center;
 
-    justify-content:center;
 
 
-    font-size:28px;
+}
 
 
-    border-radius:15px;
+
+.pirep-details {
+
+
+    display:grid;
+
+
+    grid-template-columns:
+
+    repeat(5,1fr);
+
+
+
+    margin-top:
+
+    25px;
+
+
+
+    gap:
+
+    15px;
+
+
+
+}
+
+
+
+.pirep-stat {
+
+
+    padding:
+
+    15px;
+
+
+
+    border-radius:
+
+    16px;
+
 
 
     background:
 
-    rgba(22,132,255,.25);
+    rgba(255,255,255,.06);
 
 
-    border:
 
-    1px solid rgba(80,170,255,.4);
+}
+
+
+
+.pirep-stat span {
+
+
+    display:block;
+
+
+
+    font-size:
+
+    12px;
+
+
+
+    color:
+
+    var(--text-secondary);
+
+
+
+}
+
+
+
+.pirep-stat strong {
+
+
+    display:block;
+
+
+
+    margin-top:
+
+    8px;
+
+
+
+    font-size:
+
+    18px;
+
 
 
 }
@@ -299,126 +770,235 @@ padding:20px;
 
 
 
-.card{
+
+/* =====================================================
+   LOWER SECTION
+===================================================== */
 
 
-    background:
-
-    rgba(17,55,95,.75);
+.lower-section {
 
 
-    border:
-
-    1px solid rgba(100,180,255,.2);
+    display:grid;
 
 
-    box-shadow:
+    grid-template-columns:
 
-    0 10px 35px rgba(0,0,0,.25);
-
-
-    transition:.25s;
-
-
-}
+    1fr 1fr;
 
 
 
-.card:hover{
+    gap:
 
-
-    transform:translateY(-5px);
-
-
-    border-color:#1684ff;
-
-
-    box-shadow:
-
-    0 15px 40px rgba(22,132,255,.25);
-
-
-}
-
-
-
-.rank-card{
-
-
-    background:
-
-    linear-gradient(
-    135deg,
-    #123e70,
-    #102d50
-    );
-
-
-}
-
-
-
-.progress-bar{
-
-
-    background:#071a32;
-
-
-    border:
-
-    1px solid rgba(255,255,255,.15);
-
-
-}
-
-
-
-#rankProgress{
-
-
-    background:
-
-    linear-gradient(
-    90deg,
-    #00d4ff,
-    #1684ff
-    );
-
-
-}
-
-.icon svg{
-
-
-width:28px;
-
-height:28px;
-
-
-stroke-width:2;
+    22px;
 
 
 
 }
 
 
-.icon{
+
+.route-card {
 
 
-background:
+    min-height:
 
-linear-gradient(
-135deg,
-#00c6ff,
-#7c4dff
-);
+    240px;
 
-
-
-color:white;
 
 
 }
+
+
+
+.route-airports {
+
+
+    display:flex;
+
+
+    justify-content:space-around;
+
+
+    align-items:center;
+
+
+
+    margin-top:
+
+    40px;
+
+
+
+}
+
+
+
+.route-airport {
+
+
+    text-align:center;
+
+
+
+}
+
+
+
+.route-airport strong {
+
+
+    font-size:
+
+    35px;
+
+
+
+}
+
+
+
+
+
+/* =====================================================
+   NOTIFICATIONS
+===================================================== */
+
+
+.notification-card {
+
+
+    min-height:
+
+    240px;
+
+
+
+}
+
+
+
+.notification-list {
+
+
+    display:flex;
+
+
+    flex-direction:column;
+
+
+
+    gap:
+
+    12px;
+
+
+
+}
+
+
+
+
+
+
+
+/* =====================================================
+   ANIMATION DELAYS
+===================================================== */
+
+
+.dashboard-grid .card:nth-child(1){
+
+animation-delay:.05s;
+
+}
+
+
+.dashboard-grid .card:nth-child(2){
+
+animation-delay:.1s;
+
+}
+
+
+.dashboard-grid .card:nth-child(3){
+
+animation-delay:.15s;
+
+}
+
+
+.dashboard-grid .card:nth-child(4){
+
+animation-delay:.2s;
+
+}
+
+
+
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+
+@media(max-width:900px){
+
+
+.dashboard-grid {
+
+
+    grid-template-columns:
+
+    1fr;
+
+
+
+}
+
+
+
+.rank-card,
+.hours-card,
+.current-flight,
+.pirep-card {
+
+
+    grid-column:
+
+    span 1;
+
+
+
+}
+
+
+
+.lower-section {
+
+
+    grid-template-columns:
+
+    1fr;
+
+
+
+}
+
+
+
+.pirep-details {
+
+
+    grid-template-columns:
+
+    repeat(2,1fr);
+
+
+
+}
+
 
 
 }
