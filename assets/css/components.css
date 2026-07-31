@@ -1762,34 +1762,36 @@ a {
 
     display:flex;
 
-
     align-items:center;
-
 
     gap:12px;
 
 
-
-    padding:
-
-    12px;
+    width:100%;
 
 
+    padding:12px 18px;
 
-    border-radius:
 
-    12px;
+    border:none;
 
+
+    background:transparent;
 
 
     color:white;
 
 
+    font-size:14px;
 
-    transition:
 
-    .2s;
+    border-radius:12px;
 
+
+    cursor:pointer;
+
+
+    transition:.25s;
 
 
 }
@@ -1800,9 +1802,7 @@ a {
 
 
     background:
-
-    rgba(41,151,255,.2);
-
+    rgba(255,255,255,0.12);
 
 
 }
