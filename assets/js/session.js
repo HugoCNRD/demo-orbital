@@ -1,7 +1,6 @@
 const SESSION_KEY = "crew_session";
 
 
-
 function getSession(){
 
     const session =
@@ -29,7 +28,8 @@ function requireLogin(){
 
     if(!user){
 
-        window.location.href="/index.html";
+        window.location.href =
+        "/demo-orbital/index.html";
 
         return;
 
@@ -50,7 +50,8 @@ function logout(){
     localStorage.removeItem(SESSION_KEY);
 
 
-    window.location.href="/index.html";
+    window.location.href =
+    "/demo-orbital/index.html";
 
 
 }
