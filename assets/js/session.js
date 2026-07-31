@@ -29,7 +29,7 @@ function requireLogin(){
 
     if(!user){
 
-        window.location.href="/home.html";
+        window.location.href="/index.html";
 
         return;
 
@@ -50,7 +50,7 @@ function logout(){
     localStorage.removeItem(SESSION_KEY);
 
 
-    window.location.href="/home.html";
+    window.location.href="/index.html";
 
 
 }
