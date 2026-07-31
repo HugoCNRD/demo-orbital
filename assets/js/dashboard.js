@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", async ()=>{
 
     const session =
         JSON.parse(
-            localStorage.getItem("crewSession")
+            localStorage.getItem("crew_session")
         );
 
 
