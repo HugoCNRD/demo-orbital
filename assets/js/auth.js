@@ -105,7 +105,7 @@ form.addEventListener("submit",async(e)=>{
             setTimeout(()=>{
 
                 window.location.href=
-                "../crew/dashboard.html";
+                "https://hugocnrd.github.io/demo-orbital/crew/dashboard.html";
 
             },1000);
 
