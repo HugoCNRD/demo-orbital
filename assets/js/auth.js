@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded",()=>{
 
     if(session){
 
-        window.location.href="/crew/dashboard.html";
+        window.location.href="https://hugocnrd.github.io/demo-orbital/crew/dashboard.html";
 
     }
 
