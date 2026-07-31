@@ -105,7 +105,7 @@ form.addEventListener("submit",async(e)=>{
             setTimeout(()=>{
 
                 window.location.href=
-                "/crew/dashboard.html";
+                "../crew/dashboard.html";
 
             },1000);
 
