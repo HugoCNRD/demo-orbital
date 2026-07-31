@@ -1,123 +1,318 @@
-document.addEventListener(
-"DOMContentLoaded",
-()=>{
-
-
-const user =
-getSession();
+/* =====================================================
+   CREW CENTER NAVBAR MANAGER
+===================================================== */
 
 
 
-if(!user) return;
+document.addEventListener("DOMContentLoaded", () => {
 
 
 
-const username =
-document.getElementById(
-"userName"
+/* =====================================================
+   ZULU CLOCK
+===================================================== */
+
+
+function updateZuluClock(){
+
+
+    const clock =
+        document.getElementById("zuluClock");
+
+
+
+    if(!clock) return;
+
+
+
+    const now =
+        new Date();
+
+
+
+    const hours =
+        now.getUTCHours()
+        .toString()
+        .padStart(2,"0");
+
+
+
+    const minutes =
+        now.getUTCMinutes()
+        .toString()
+        .padStart(2,"0");
+
+
+
+    const seconds =
+        now.getUTCSeconds()
+        .toString()
+        .padStart(2,"0");
+
+
+
+    clock.innerHTML = `
+
+        <i data-lucide="clock"></i>
+
+        ${hours}:${minutes}:${seconds} Z
+
+    `;
+
+
+
+    if(window.lucide){
+
+        lucide.createIcons();
+
+    }
+
+
+
+}
+
+
+
+updateZuluClock();
+
+
+setInterval(
+    updateZuluClock,
+    1000
 );
 
 
 
-if(username){
-
-username.innerHTML =
-user.username;
-
-}
 
 
 
-const rank =
-document.getElementById(
-"userRank"
-);
+/* =====================================================
+   USER MENU
+===================================================== */
 
 
+const userButton =
+    document.getElementById("userButton");
 
-if(rank){
 
-rank.innerHTML =
-user.rank;
-
-}
+const userDropdown =
+    document.getElementById("userDropdown");
 
 
 
 
-const staffButton =
-document.getElementById(
-"staffAccess"
-);
+
+if(userButton && userDropdown){
 
 
 
-if(
-staffButton
-&&
-!isStaff()
-){
+    userButton.addEventListener(
+        "click",
+        (event)=>{
 
-staffButton.style.display="none";
 
-}
+            event.stopPropagation();
 
 
 
-
-const logoutButton =
-document.getElementById(
-"logoutButton"
-);
+            userDropdown.classList.toggle(
+                "active"
+            );
 
 
-
-if(logoutButton){
-
-logoutButton.onclick =
-logout;
-
-}
-
-const menuButton =
-document.querySelector(".user-button");
-
-
-const dropdown =
-document.querySelector(".user-dropdown");
+        }
+    );
 
 
 
-if(menuButton){
 
 
-menuButton.onclick = (e)=>{
+    document.addEventListener(
+        "click",
+        ()=>{
 
 
-e.stopPropagation();
+            userDropdown.classList.remove(
+                "active"
+            );
 
 
-dropdown.classList.toggle("active");
+        }
+    );
 
 
-};
+
+
+
+    userDropdown.addEventListener(
+        "click",
+        (event)=>{
+
+
+            event.stopPropagation();
+
+
+        }
+    );
 
 
 }
 
 
 
-document.onclick=()=>{
 
 
-if(dropdown){
 
-dropdown.classList.remove("active");
+
+
+/* =====================================================
+   SESSION USER DATA
+===================================================== */
+
+
+
+const session =
+    JSON.parse(
+        localStorage.getItem("crewSession")
+    );
+
+
+
+
+
+if(session){
+
+
+    const username =
+        document.getElementById(
+            "navbarUsername"
+        );
+
+
+
+    const profileName =
+        document.getElementById(
+            "profileUsername"
+        );
+
+
+
+    if(username){
+
+        username.textContent =
+            session.username;
+
+    }
+
+
+
+    if(profileName){
+
+        profileName.textContent =
+            session.username;
+
+    }
+
+
+
+
+
+
+
+    /*
+        STAFF ACCESS CONTROL
+
+        IMPORTANT:
+        Le bouton existe dans le HTML
+        mais il est caché par défaut.
+
+        Il apparaît uniquement
+        si staff === true.
+    */
+
+
+    const staffButton =
+        document.getElementById(
+            "staffCenterButton"
+        );
+
+
+
+    if(
+        staffButton &&
+        session.staff === true
+    ){
+
+        staffButton.style.display =
+            "flex";
+
+    }
+
+
+
+
 
 }
 
 
-};
+
+
+
+
+
+/* =====================================================
+   LOGOUT
+===================================================== */
+
+
+const logout =
+    document.getElementById(
+        "logoutButton"
+    );
+
+
+
+if(logout){
+
+
+    logout.addEventListener(
+        "click",
+        ()=>{
+
+
+            localStorage.removeItem(
+                "crewSession"
+            );
+
+
+
+            window.location.href =
+                "../index.html";
+
+
+        }
+    );
+
+
+}
+
+
+
+
+
+
+
+/* =====================================================
+   LUCIDE ICONS
+===================================================== */
+
+
+if(window.lucide){
+
+    lucide.createIcons();
+
+}
+
 
 
 });
