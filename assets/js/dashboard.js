@@ -132,6 +132,7 @@ async function loadDashboard(username){
 
         const data =
             await response.json();
+       console.log("DASHBOARD DATA :", data);
 
 
 
