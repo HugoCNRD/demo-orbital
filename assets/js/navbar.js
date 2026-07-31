@@ -173,7 +173,7 @@ if(userButton && userDropdown){
 
 const session =
     JSON.parse(
-        localStorage.getItem("crewSession")
+        localStorage.getItem("crew_session")
     );
 
 
