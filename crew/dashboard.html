@@ -4,64 +4,119 @@
 <head>
 
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 
 <title>Crew Dashboard</title>
 
+
+<link rel="stylesheet" href="../assets/css/global.css">
 <link rel="stylesheet" href="../assets/css/components.css">
 <link rel="stylesheet" href="../assets/css/crew.css">
 
+
 <script src="https://unpkg.com/lucide@latest"></script>
+
 
 </head>
 
-<script src="https://unpkg.com/lucide@latest"></script>
 
-<script src="../assets/js/theme.js"></script>
-
-<script>
-lucide.createIcons();
-</script>
 
 <body>
+
+
+<!-- ==============================
+     NAVBAR
+================================ -->
 
 
 <nav class="navbar">
 
 
 <div class="nav-logo">
-VA LOGO
+
+<img 
+src="../assets/img/logo.png"
+alt="VA Logo"
+width="42">
+
+<span>
+Virtual Airline
+</span>
+
+
 </div>
+
+
 
 
 
 <div class="nav-links">
 
-<a class="active" href="../crew/dashboard.html">
+
+<a href="dashboard.html" class="active">
+
+<i data-lucide="layout-dashboard"></i>
+
 Dashboard
+
 </a>
 
-<a href="../crew/routes.html">
+
+
+<a href="routes.html">
+
+<i data-lucide="route"></i>
+
 Routes
+
 </a>
 
-<a href="../crew/pirep.html">
+
+
+<a href="pirep.html">
+
+<i data-lucide="file-plus"></i>
+
 File PIREP
+
 </a>
 
-<a href="../crew/logbook.html">
+
+
+<a href="logbook.html">
+
+<i data-lucide="book-open"></i>
+
 Logbook
+
 </a>
 
-<a href="../crew/leaderboard.html">
+
+
+<a href="leaderboard.html">
+
+<i data-lucide="trophy"></i>
+
 Leaderboard
+
 </a>
 
-<a href="../crew/loa.html">
+
+
+<a href="loa.html">
+
+<i data-lucide="calendar-off"></i>
+
 LOA
+
 </a>
+
 
 </div>
+
+
 
 
 
@@ -70,37 +125,110 @@ LOA
 
 
 <div id="zuluClock">
+
+<i data-lucide="clock"></i>
+
 00:00:00 Z
+
 </div>
+
+
+
+<button 
+class="theme-toggle"
+id="themeToggle">
+
+<i 
+id="themeIcon"
+data-lucide="sun">
+
+</i>
+
+</button>
+
+
 
 
 
 <div class="user-menu">
 
-<span id="userName">
+
+<button 
+id="userButton"
+class="user-button">
+
+
+<i data-lucide="user"></i>
+
+
+<span id="navbarUsername">
 User
 </span>
 
 
-<div class="dropdown">
+<i data-lucide="chevron-down"></i>
 
 
-<span id="userRank">
-Rank
-</span>
-
-
-<a id="staffAccess" class="dropdown-item staff-button" href="../staff/dashboard.html">
-<i data-lucide="shield-check"></i>
-Staff Center
-</a> 
-
-
-<button id="logoutButton">
-Sign Out
 </button>
 
 
+
+
+
+<div 
+id="userDropdown"
+class="user-dropdown">
+
+
+<div class="dropdown-profile">
+
+<h3 id="profileUsername">
+User
+</h3>
+
+
+<span>
+Crew Member
+</span>
+
+
+</div>
+
+
+
+
+<a 
+class="dropdown-item"
+id="staffCenterButton"
+href="../staff/dashboard.html"
+style="display:none">
+
+
+<i data-lucide="shield"></i>
+
+Staff Center
+
+
+</a>
+
+
+
+
+
+<button 
+class="dropdown-item"
+id="logoutButton">
+
+
+<i data-lucide="log-out"></i>
+
+Sign Out
+
+
+</button>
+
+
+
 </div>
 
 
@@ -108,6 +236,7 @@ Sign Out
 
 
 </div>
+
 
 
 </nav>
@@ -115,112 +244,39 @@ Sign Out
 
 
 
-<main class="dashboard-container">
 
+
+
+<!-- ==============================
+     CONTENT
+================================ -->
+
+
+
+<main class="page-container">
+
+
+
+
+
+<section class="dashboard-header">
+
+
+<div>
 
 
 <h1>
 Crew Dashboard
 </h1>
 
-<p class="welcome">
+
+<p>
 Welcome back,
-<span id="pilotName"></span>
+<span id="welcomeUsername">
+Pilot
+</span>
 </p>
 
-
-
-
-<section class="stats-grid">
-
-
-
-<div class="card stat-card hours">
-
-<div class="icon">
-<i data-lucide="plane"></i>
-</div>
-
-<div>
-
-<h3>
-IF Grade
-</h3>
-
-<p id="ifGrade">
-N/A
-</p>
-
-</div>
-
-</div>
-
-
-
-
-<div class="card stat-card hours">
-
-<div class="icon">
-<i data-lucide="clock-3"></i>
-</div>
-
-<div>
-
-<h3>
-VA Hours
-</h3>
-
-<p id="hours">
-0:00
-</p>
-
-</div>
-
-</div>
-
-
-
-
-<div class="card stat-card hours">
-
-<div class="icon">
-<i data-lucide="file-check"></i>
-</div>
-
-<div>
-
-<h3>
-Pireps filled
-</h3>
-
-<p id="pireps">
-0
-</p>
-
-</div>
-
-</div>
-
-
-
-
-<div class="card stat-card hours">
-
-<div class="icon">
-<i data-lucide="radio"></i>
-</div>
-
-<div>
-
-<h3>
-Current Flight
-</h3>
-
-<p id="currentFlight">
-No flight currently
-</p>
-
-</div>
 
 </div>
 
@@ -232,37 +288,158 @@ No flight currently
 
 
 
-<section class="large-grid">
 
 
 
-<div class="card rank-card">
+<section class="dashboard-grid">
 
 
-<h2>
+
+
+
+<!-- RANK -->
+
+
+<div class="card hero-card rank-card fade-in">
+
+
+<div class="card-header">
+
+
+<div class="icon-box icon-purple">
+
+<i data-lucide="award"></i>
+
+</div>
+
+
+
+<span class="card-title">
+
 Current Rank
-</h2>
 
+</span>
 
-<h3 id="rank">
-Cadet
-</h3>
-
-
-
-<div class="progress-bar">
-
-
-<div id="rankProgress"></div>
 
 
 </div>
 
 
 
-<p id="nextRank">
 
-Loading next rank...
+
+<div>
+
+
+<div 
+class="rank-name"
+id="currentRank">
+
+Cadet
+
+</div>
+
+
+
+<p class="rank-next">
+
+Next rank:
+<span id="nextRank">
+Loading...
+</span>
+
+</p>
+
+
+<div class="progress">
+
+
+<div 
+class="progress-bar"
+id="rankProgress"
+style="width:0%">
+
+</div>
+
+
+</div>
+
+
+
+<div class="rank-progress-text">
+
+
+<span id="hoursCurrent">
+
+0h
+
+</span>
+
+
+<span id="hoursNeeded">
+
+0h
+
+</span>
+
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- HOURS -->
+
+
+<div class="card hero-card hours-card fade-in">
+
+
+<div class="card-header">
+
+
+<div class="icon-box icon-green">
+
+<i data-lucide="clock-3"></i>
+
+</div>
+
+
+<span class="card-title">
+
+VA Flight Hours
+
+</span>
+
+
+</div>
+
+
+
+<div 
+class="card-value"
+id="vaHours">
+
+0:00
+
+</div>
+
+
+
+<p class="card-description">
+
+Total approved VA flight time
 
 </p>
 
@@ -273,7 +450,170 @@ Loading next rank...
 
 
 
-<div class="card">
+
+
+
+
+<!-- IF GRADE -->
+
+
+<div class="card kpi-card kpi-grade fade-in">
+
+
+<div class="card-header">
+
+
+<div class="icon-box icon-blue">
+
+<i data-lucide="badge-check"></i>
+
+</div>
+
+
+</div>
+
+
+
+<div class="kpi-title">
+
+Infinite Flight Grade
+
+</div>
+
+
+
+<div 
+class="card-value"
+id="ifGrade">
+
+Loading...
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- PIREPS -->
+
+
+<div class="card kpi-card kpi-pirep fade-in">
+
+
+<div class="card-header">
+
+
+<div class="icon-box icon-orange">
+
+<i data-lucide="files"></i>
+
+</div>
+
+
+</div>
+
+
+<div class="kpi-title">
+
+PIREPs Filed
+
+</div>
+
+
+
+<div 
+class="card-value"
+id="pirepsCount">
+
+0
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- CURRENT FLIGHT -->
+
+
+<div class="card current-flight fade-in">
+
+
+<div class="card-header">
+
+
+<span class="card-title">
+
+Current Flight
+
+</span>
+
+
+
+<i data-lucide="plane"></i>
+
+
+</div>
+
+
+
+
+<div 
+id="currentFlight">
+
+
+<div class="empty-state">
+
+
+<i data-lucide="plane-off"></i>
+
+
+<p>
+No flight currently
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- LAST PIREP -->
+
+
+<div class="card pirep-card fade-in">
+
+
+<div class="pirep-header">
+
+
+<div>
 
 
 <h2>
@@ -281,9 +621,37 @@ Last Filed PIREP
 </h2>
 
 
-<div id="lastPirep">
+<p class="card-description">
 
+Your latest flight report
+
+</p>
+
+
+</div>
+
+
+
+<i data-lucide="history"></i>
+
+
+
+</div>
+
+
+
+
+
+<div 
+class="pirep-details"
+id="lastPirep">
+
+
+<div class="empty-state">
+
+<p>
 No PIREP found
+</p>
 
 </div>
 
@@ -291,9 +659,33 @@ No PIREP found
 </div>
 
 
+</div>
 
 
-<div class="card">
+
+
+
+
+
+
+</section>
+
+
+
+
+
+
+
+<section class="lower-section">
+
+
+
+
+
+<div class="card route-card fade-in">
+
+
+<div class="card-header">
 
 
 <h2>
@@ -301,19 +693,87 @@ Route Of The Week
 </h2>
 
 
-<div id="routeWeek">
+<i data-lucide="map"></i>
 
+
+</div>
+
+
+
+
+<div 
+id="routeOfWeek">
+
+
+<div class="empty-state">
+
+<p>
 Loading...
 
+</p>
+
 </div>
 
 
 </div>
 
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="card notification-card fade-in">
+
+
+<div class="card-header">
+
+
+<h2>
+Notifications
+</h2>
+
+
+<i data-lucide="bell"></i>
+
+
+</div>
+
+
+
+<div 
+class="notification-list"
+id="notifications">
+
+
+<div class="empty-state">
+
+
+<p>
+No new notifications
+
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+</div>
 
 
 
 </section>
+
+
 
 
 
@@ -324,7 +784,10 @@ Loading...
 
 
 
+
+
 <footer>
+
 
 © 2026 Virtual Airline Crew Center
 
@@ -333,13 +796,23 @@ Loading...
 
 
 
-<script src="../assets/js/session.js"></script>
-<script src="../assets/js/api.js"></script>
+
+
+
+
+<script src="../assets/js/theme.js"></script>
+
 <script src="../assets/js/navbar.js"></script>
-<script src="../assets/js/clock.js"></script>
-<script src="../assets/js/notifications.js"></script>
 
 <script src="../assets/js/dashboard.js"></script>
+
+
+
+<script>
+
+lucide.createIcons();
+
+</script>
 
 
 </body>
